@@ -3,6 +3,7 @@ Salt Formula for ReplayD
 https://kitchen.saltstack.com/docs/file/docs/gettingstarted.md
 * Get a working rbenv (i.e. `brew install rbenv`)
 * `rbenv install 2.5.1`
+* in the root of this repository: `rbenv local 2.5.1`
 * `gem install bundler`
 * `bundle install`
 * `bundle exec kitchen test`
