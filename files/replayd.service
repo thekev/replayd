@@ -1,0 +1,16 @@
+[Unit]
+Description=ReplayD Service
+After=network.target systemd-tmpfiles-setup.service
+
+[Service]
+Environment=REPLAYD_PORT={{ pillar['replayd']['port'] }}
+Environment=REPLAYD_ROOT={{ pillar['replayd']['docroot'] }}
+Type=simple
+User=replayd
+Group=replayd
+ExecStart=/usr/local/bin/replayd
+
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
